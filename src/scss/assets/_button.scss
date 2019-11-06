@@ -1,0 +1,41 @@
+.btn {
+  cursor: pointer;
+  padding: $margin;
+  border: none;
+  border-radius: $border-radius;
+  background: $light;
+
+  &:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba($light, .5);
+  }
+
+  &:hover {
+    background: darken($light, 5%);
+  }
+}
+
+.btn-primary {
+  background: $base;
+
+  &:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba($base, .5);
+  }
+  &:hover {
+    background: darken($base, 5%);
+  }
+}
+
+.btn-dark {
+  color: white;
+  background: $dark;
+
+  &:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba($dark, .5);
+  }
+  &:hover {
+    background: darken($dark, 5%);
+  }
+}

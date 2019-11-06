@@ -1,0 +1,37 @@
+.form-container {
+  max-width: $form-container;
+}
+
+.form-vertical,
+.form-horizontal {
+  margin-top: $margin-vertical;
+  margin-bottom: $margin-vertical;
+}
+
+.form-group {
+  margin-top: $margin-vertical;
+  margin-bottom: $margin-vertical;
+
+  label {
+    display: block;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: $form-margin;
+  }
+}
+
+.form-horizontal {
+  .form-group {
+    label {
+      display: inline-block;
+    }
+
+    input,
+    select {
+      width: auto;
+    }
+  }
+}
