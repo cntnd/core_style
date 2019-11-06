@@ -1,0 +1,26 @@
+{
+  "name": "core_style",
+  "version": "1.0.0",
+  "description": "cntnd core style",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cntnd/core_style.git"
+  },
+  "keywords": [
+    "cntnd",
+    "core",
+    "style"
+  ],
+  "author": "tdascoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cntnd/core_style/issues"
+  },
+  "homepage": "https://github.com/cntnd/core_style#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-minifier": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
