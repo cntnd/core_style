@@ -39,3 +39,16 @@
     background: darken($dark, 5%);
   }
 }
+
+.btn-light {
+  color: black;
+  background: $light;
+
+  &:focus {
+    border: none;
+    box-shadow: 0 0 0 0.2rem rgba($light, .5);
+  }
+  &:hover {
+    background: darken($light, 5%);
+  }
+}
