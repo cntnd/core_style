@@ -1,0 +1,18 @@
+.cntnd_alert {
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+}
+
+.cntnd_alert-danger {
+    color: $danger;
+    background-color: lighten($danger, 50%);
+    border-color:  lighten($danger, 25%);
+}
+
+.cntnd_alert-primary {
+  color: $base;
+  background-color: lighten($base, 50%);
+  border-color:  lighten($base, 25%);
+}
