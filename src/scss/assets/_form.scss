@@ -23,6 +23,10 @@
     padding: $form-margin;
     font-family: inherit;
   }
+
+  select {
+    width: 100% !important;
+  }
 }
 
 .form-horizontal {
