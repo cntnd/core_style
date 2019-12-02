@@ -19,7 +19,7 @@
   input,
   textarea,
   select {
-    width: 100%;
+    width: calc(100% - #{(2 * $border-radius) + (2 * $form-margin-horizontal)});
     padding: $form-margin;
     font-family: inherit;
   }
