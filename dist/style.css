@@ -1,3 +1,13 @@
 @import url('https://rsms.me/inter/inter.css');
 
 body { font-family: 'Inter', sans-serif !important; }
+
+.disp_flex-demo div {
+  margin: 5px 0;
+}
+
+.disp_flex-demo span {
+  border: 1px solid #333;
+  background-color: #eee;
+  display: block;
+}

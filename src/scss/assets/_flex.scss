@@ -1,0 +1,42 @@
+.disp-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  &.flex-column {
+    flex-direction: column;
+  }
+
+  &.flex-wrap-nowrap {
+      flex-wrap: nowrap;
+  }
+
+  &.justify-content-between {
+    justify-content: space-between;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-33 {
+  width: 33.3%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-auto {
+  width: auto;
+}
