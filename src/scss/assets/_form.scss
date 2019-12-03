@@ -42,3 +42,23 @@
     }
   }
 }
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: ($margin-horizontal * 2);
+}
+
+.form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  margin-right: $margin-horizontal;
+}
+
+.form-check-inline .form-check-input {
+  width: auto;
+  margin-top: 0;
+  margin-right: ($margin-horizontal / 2);
+  margin-left: 0;
+}
