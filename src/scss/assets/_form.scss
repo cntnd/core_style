@@ -43,6 +43,14 @@
   }
 }
 
+.text-muted {
+    color: $dark !important;
+}
+.form-text {
+    display: block;
+    margin-top: ($margin-vertical / 2);
+}
+
 .form-check {
   position: relative;
   display: block;
