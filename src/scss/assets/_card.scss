@@ -19,3 +19,14 @@
 .card-text {
     margin-bottom: $margin-vertical;
 }
+
+.card-header:first-child {
+    border-radius: calc({$card-border-radius} - 1px) calc({$card-border-radius} - 1px) 0 0;
+}
+
+.card-header {
+    padding: $margin;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
