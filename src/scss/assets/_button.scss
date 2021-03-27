@@ -4,6 +4,7 @@
   border: none;
   border-radius: $border-radius;
   background: $light;
+  font-size: 1em;
 
   &:focus {
     border: none;
@@ -25,6 +26,11 @@
   &:hover {
     background: darken($base, 5%);
   }
+}
+
+.btn-sm {
+  padding: $margin-narrow;
+  font-size: .875em;
 }
 
 .btn-dark {
