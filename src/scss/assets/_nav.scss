@@ -1,0 +1,70 @@
+//
+// Tabs
+//
+
+.tabs {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+  border-bottom: $nav-tabs-border-width solid $gray-500;
+}
+
+ul.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__tab {
+  padding: 5px 10px;
+  margin-bottom: -$nav-tabs-border-width;
+
+  &.active {
+    border: $nav-tabs-border-width solid $gray-500;
+    border-bottom-color: #fff;
+
+    border-top-left-radius: $nav-tabs-border-radius;
+    border-top-right-radius: $nav-tabs-border-radius;
+  }
+
+  &:hover:not(.active):not(.disabled),
+  &:focus:not(.active):not(.disabled) {
+    cursor: pointer;
+
+    border: $nav-tabs-border-width solid $gray-500;
+    border-bottom-color: $gray-500;
+
+    margin-right: -$nav-tabs-border-width;
+    margin-left: -$nav-tabs-border-width;
+
+    border-top-left-radius: $nav-tabs-border-radius;
+    border-top-right-radius: $nav-tabs-border-radius;
+  }
+
+  &.inactive {
+    border-bottom: $nav-tabs-border-width solid $gray-500;
+  }
+
+  &.disabled {
+    color: #ccc;
+  }
+}
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tabs__content {
+  border: $nav-tabs-border-width solid $gray-500;
+  border-top: 0 solid transparent;
+
+  > .tabs__content--pane {
+    padding: 0 5px;
+    display: none;
+
+    &.show,
+    &.active {
+      display: flex;
+    }
+  }
+}

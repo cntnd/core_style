@@ -8,9 +8,12 @@
 
     <title>core_style</title>
 
-    <link href="style.css" rel="stylesheet">
-    <link href="core_style.css" rel="stylesheet">
-    <link href="core_pifa.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <link href="core_style.css" rel="stylesheet" />
+    <link href="core_pifa.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="core_script.js"></script>
 </head>
 
 <body>
@@ -122,6 +125,29 @@
           <select class="" name="test-input12" id="test-input12">
             <option value="no-value">option</option>
           </select>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>nav tabs</h2>
+
+    <div>
+
+      <ul class="tabs" id="tabs-demo">
+        <li class="tabs__tab active" data-toggle="tabs" data-target="tabs-demo__content--admin"><span class="tabs__tab--link">Admin</span></li>
+        <li class="tabs__tab" data-toggle="tabs" data-target="tabs-demo__content--config"><span class="tabs__tab--link">Konfiguration</span></li>
+        <li class="tabs__tab" data-toggle="tabs" data-target="tabs-demo__content--config"><span class="tabs__tab--link">Konfiguration II</span></li>
+        <li class="tabs__tab disabled"><span class="tabs__tab--link">Disabled</span></li>
+      </ul>
+
+      <div class="tabs__content" id="tabs-demo__content">
+        <div class="tabs__content--pane fade active" id="tabs-demo__content--admin">
+          <p><strong>Admin Tab Content</strong></p>
+        </div>
+
+        <div class="tabs__content--pane fade" id="tabs-demo__content--config">
+          <p><strong>Konfiguration Tab Content</strong></p>
         </div>
       </div>
 
