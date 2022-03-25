@@ -22,7 +22,7 @@
     "gulp": "^4.0.2",
     "gulp-minifier": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "minimist": ">=1.2.3",
+    "minimist": ">=1.2.6",
     "mkdirp": "1.0.4"
   }
 }
