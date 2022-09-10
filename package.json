@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/cntnd/core_style#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-minifier": "^2.0.0",
     "gulp-sass": "^4.1.0",
