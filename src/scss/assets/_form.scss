@@ -44,11 +44,12 @@
 }
 
 .text-muted {
-    color: $dark !important;
+  color: $dark !important;
 }
+
 .form-text {
-    display: block;
-    margin-top: ($margin-vertical / 2);
+  display: block;
+  margin-top: ($margin-vertical / 2);
 }
 
 .form-check {
@@ -69,4 +70,14 @@
   margin-top: 0;
   margin-right: ($margin-horizontal / 2);
   margin-left: ($margin-horizontal / 2);
+}
+
+fieldset {
+  margin: $margin-vertical 0.25rem;
+  border-radius: $border-radius;
+  border: $border-width solid $gray-500;
+
+  legend {
+    font-weight: bold;
+  }
 }
