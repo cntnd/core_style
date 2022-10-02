@@ -7,7 +7,6 @@
   border: 1px solid rgb(200,200,200);
   position: relative;
 
-  height: 100%;
   width: 100%;
 
   display: block;
@@ -20,6 +19,8 @@
 }
 .module_box_end {
   width: 100%;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .hide {
