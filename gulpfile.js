@@ -1,5 +1,5 @@
 var gulp        = require('gulp');
-var sass        = require('gulp-sass');
+var sass        = require('gulp-sass')(require('sass'));
 var minify      = require('gulp-minifier');
 var browserSync = require('browser-sync').create();
 
@@ -39,4 +39,4 @@ gulp.task('js', function() {
 
 gulp.task('default', gulp.series('sass','js', 'watch'));
 
-gulp.task('dist', gulp.series('sass'));
+gulp.task('dist', gulp.series('sass','js'));

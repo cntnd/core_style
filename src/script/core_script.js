@@ -5,7 +5,6 @@ $(document).ready(function(){
       var type = $(this).data("toggle");
       var target = $(this).data("target");
 
-      console.log("toggle:", type, target)
       if (type === "tabs") {
         tabs($(this), $("#" + target))
       }
@@ -22,4 +21,35 @@ $(document).ready(function(){
     target.addClass("active")
   }
 
+  $(".check-dependent").click(function(){
+    var dependent = $(this).data("check-dependent");
+    var dependents = dependent.split(';');
+    dependents.forEach(element => {
+      $("#"+element).prop('checked', $(this).prop('checked'));
+    });
+  });
+
+  $(".disable-dependent").click(function(){
+    var dependent = $(this).data("disable-dependent");
+    var dependents = dependent.split(';');
+    dependents.forEach(element => {
+      $("#"+element).prop('disabled', $(this).prop('checked'));
+    });
+  });
 });
+
+// Module Box
+function moduleBox(module, uuid) {
+  var self = $(".module_box[data-module="+module+"][data-uuid="+uuid+"]");
+  console.log("moduleBox", self);
+  var parent = self.parent();
+  var end = parent.find(".module_box_end");
+  var height = end.offset().top - self.offset().top;
+  var width = parent.width();
+
+
+  console.log("height", end.offset().top, self.offset().top, height);
+  console.log("width", parent.outerWidth(), parent.width());
+
+  self.css("height", height).css("width", width);
+}

@@ -49,13 +49,13 @@
 
 .form-text {
   display: block;
-  margin-top: ($margin-vertical / 2);
+  margin-top: calc($margin-vertical / 2);
 }
 
 .form-check {
   position: relative;
   display: block;
-  padding-left: ($margin-horizontal * 2);
+  padding-left: calc($margin-horizontal * 2);
 }
 
 .form-check-inline {
@@ -68,8 +68,8 @@
 .form-check-inline .form-check-input {
   width: auto;
   margin-top: 0;
-  margin-right: ($margin-horizontal / 2);
-  margin-left: ($margin-horizontal / 2);
+  margin-right: calc($margin-horizontal / 2);
+  margin-left: calc($margin-horizontal / 2);
 }
 
 fieldset {

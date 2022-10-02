@@ -1,17 +1,10 @@
-//----------------------------------*\
-// CONFIG MODULES
-//----------------------------------*/
+@import 'vars';
 
-// Config modules
-@import '_vars.scss';
+@import 'assets/alert';
+@import 'assets/button';
+@import 'assets/card';
+@import 'assets/flex';
+@import 'assets/form';
+@import 'assets/nav';
 
-//----------------------------------*\
-// ASSETS
-//----------------------------------*/
-
-@import 'assets/_alert.scss';
-@import 'assets/_button.scss';
-@import 'assets/_card.scss';
-@import 'assets/_flex.scss';
-@import 'assets/_form.scss';
-@import 'assets/_nav.scss';
+@import 'module/module_box';
