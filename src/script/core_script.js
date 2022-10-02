@@ -45,6 +45,6 @@ function moduleBox(module, uuid) {
   var end = parent.find(".module_box_end");
   var height = end.offset().top - self.offset().top;
   var width = parent.width();
-  console.log("top",self.offset().top,parent.offset().top)
+  console.log(module, uuid, "top",self.offset().top,parent.offset().top);
   self.css("height", height).css("width", width).css("top", self.offset().top).css("position","absolute");
 }
