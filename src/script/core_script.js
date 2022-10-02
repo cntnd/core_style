@@ -40,11 +40,13 @@ $(document).ready(function(){
 
 // Module Box
 function moduleBox(module, uuid) {
-  var self = $(".module_box[data-module="+module+"][data-uuid="+uuid+"]");
-  var parent = self.parent();
-  var end = parent.find(".module_box_end");
-  var height = end.offset().top - self.offset().top;
-  var width = parent.width();
-  console.log(module, uuid, "top",self.offset().top,parent.offset().top);
-  self.css("height", height).css("width", width).css("top", self.offset().top).css("position","absolute");
+  var self = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "]");
+  var inner = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner");
+  var label = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner label");
+  var end = $(".module_box_end[data-module=" + module + "][data-uuid=" + uuid + "]");
+  var height = end.offset().top - self.offset().top - inner.height();
+  var width = self.parent().width();
+  var top = self.offset().top;
+  self.css("height", height).css("width", width).css("position","absolute").css("top", top);
+  label.css("margin-top",-label.outerHeight());
 }
