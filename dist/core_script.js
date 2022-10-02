@@ -41,15 +41,9 @@ $(document).ready(function(){
 // Module Box
 function moduleBox(module, uuid) {
   var self = $(".module_box[data-module="+module+"][data-uuid="+uuid+"]");
-  console.log("moduleBox", self);
   var parent = self.parent();
   var end = parent.find(".module_box_end");
   var height = end.offset().top - self.offset().top;
   var width = parent.width();
-
-
-  console.log("height", end.offset().top, self.offset().top, height);
-  console.log("width", parent.outerWidth(), parent.width());
-
   self.css("height", height).css("width", width);
 }
