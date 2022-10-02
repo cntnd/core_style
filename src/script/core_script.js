@@ -38,25 +38,31 @@ $(document).ready(function(){
     });
 
     // Module Box
-    if (cntnd_core === undefined) {
+    $(".module_box_outer").each(function () {
+      var module = $(this).attr("data-module");
+      var uuid = $(this).attr("data-uuid");
+
+      var self = $(this);
+      var inner = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner");
+      var label = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner label");
+      var end = $(".module_box_end[data-module=" + module + "][data-uuid=" + uuid + "]");
+
+      var height = end.offset().top - self.offset().top;
+      var width = self.parent().width();
+      var top = self.offset().top;
+
+      self.css("height", height).css("width", width).css("position", "absolute").css("top", top);
+      inner.css("height", "100%");
+      label.css("margin-top", -label.outerHeight());
+    });
+
+    $(window).resize(function() {
       $(".module_box_outer").each(function () {
-        var module = $(this).attr("data-module");
-        var uuid = $(this).attr("data-uuid");
-
         var self = $(this);
-        var inner = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner");
-        var label = $(".module_box_outer[data-module=" + module + "][data-uuid=" + uuid + "] .module_box_inner label");
-        var end = $(".module_box_end[data-module=" + module + "][data-uuid=" + uuid + "]");
-
-        var height = end.offset().top - self.offset().top;
         var width = self.parent().width();
-        var top = self.offset().top;
-
-        self.css("height", height).css("width", width).css("position", "absolute").css("top", top);
-        inner.css("height", "100%");
-        label.css("margin-top", -label.outerHeight());
+        self.css("width", width);
       });
-    }
+    });
   }
   var cntnd_core = true;
 });
