@@ -1,0 +1,62 @@
+:root {
+  --popup-border-radius: #{$popup-border-radius};
+  --popup-padding: #{$popup-padding};
+  --popup-margin: 70px auto;
+  --popup-width: 40%;
+  --popup-close-position: #{$popup-close-position};
+  --popup-close-size: #{$popup-close-size};
+  --popup-content-height: 40%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.overlay:target,
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: var(--popup-margin);
+  padding: var(--popup-padding);
+  background: $white;
+  border-radius: var(--popup-border-radius);
+  width: var(--popup-width);
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+.popup .close {
+  position: absolute;
+  top: calc(.5 * var(--popup-padding));
+  right: var(--popup-close-position);
+  transition: all 200ms;
+  font-size: var(--popup-close-size);
+  font-weight: bold;
+  text-decoration: none;
+  color: $black;
+}
+
+.popup .close:hover {
+  color: $nav-link-color;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup .content {
+  max-height: var(--popup-content-height);
+  overflow: auto;
+}

@@ -1,3 +1,10 @@
+:root {
+  --btn-color-base: #{$base};
+  --btn-color-dark: #{$dark};
+  --btn-color-light: #{$light};
+  --btn-color-danger: #{$danger};
+}
+
 .btn {
   cursor: pointer;
   padding: $margin;
@@ -23,6 +30,7 @@
     border: none;
     box-shadow: 0 0 0 0.2rem rgba($base, .5);
   }
+
   &:hover {
     background: darken($base, 5%);
   }
@@ -41,6 +49,7 @@
     border: none;
     box-shadow: 0 0 0 0.2rem rgba($dark, .5);
   }
+
   &:hover {
     background: darken($dark, 5%);
   }
@@ -54,6 +63,7 @@
     border: none;
     box-shadow: 0 0 0 0.2rem rgba($light, .5);
   }
+
   &:hover {
     background: darken($light, 5%);
   }

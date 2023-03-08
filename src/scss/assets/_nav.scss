@@ -16,7 +16,7 @@ ul.tabs {
 }
 
 .tabs__tab {
-  padding: 5px 10px;
+  padding: 10px 20px;
   margin-bottom: -$nav-tabs-border-width;
 
   &.active {
@@ -25,10 +25,16 @@ ul.tabs {
 
     border-top-left-radius: $nav-tabs-border-radius;
     border-top-right-radius: $nav-tabs-border-radius;
+
+    font-weight: 700;
   }
 
   &:hover:not(.active):not(.disabled),
   &:focus:not(.active):not(.disabled) {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
     cursor: pointer;
 
     border: $nav-tabs-border-width solid $gray-500;
@@ -55,16 +61,21 @@ ul.tabs {
 // Hide tabbable panes to start, show them when `.active`
 
 .tabs__content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
   border: $nav-tabs-border-width solid $gray-500;
   border-top: 0 solid transparent;
 
   > .tabs__content--pane {
-    padding: 0 5px;
+    padding: 10px 20px;
     display: none;
 
     &.show,
     &.active {
-      display: block;
+      display: inline-block;
+      width: calc(100% - 40px);
     }
   }
 }
